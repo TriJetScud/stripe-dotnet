@@ -65,7 +65,7 @@ namespace Stripe
             );
         }
 
-        public virtual StripeList<StripeCard> List(string customerOrRecipientId, StripeListOptions listOptions = null, bool isRecipient = false, StripeRequestOptions requestOptions = null)
+        public virtual StripeList<StripeCard> List(string customerOrRecipientId, StripeCardListOptions listOptions = null, bool isRecipient = false, StripeRequestOptions requestOptions = null)
         {
             var url = SetupUrl(customerOrRecipientId, isRecipient);
 
@@ -133,7 +133,7 @@ namespace Stripe
                 );
         }
 
-        public virtual async Task<StripeList<StripeCard>> ListAsync(string customerOrRecipientId, StripeListOptions listOptions = null, bool isRecipient = false, StripeRequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
+        public virtual async Task<StripeList<StripeCard>> ListAsync(string customerOrRecipientId, StripeCardListOptions listOptions = null, bool isRecipient = false, StripeRequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             var url = SetupUrl(customerOrRecipientId, isRecipient);
 
